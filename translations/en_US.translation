@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- DRIVER_LICENSE --></label>
+        <name>DRIVER_LICENSE</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- PAYSTUB --></label>
+        <name>PAYSTUB</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- UPLOAD DOCUMENTS --></label>
+        <name>UPLOAD_DOCUMENTS</name>
+    </customLabels>
+</Translations>

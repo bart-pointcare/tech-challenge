@@ -1,0 +1,29 @@
+<aura:component controller="UploadDocumentController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="label" type="String" />
+    <aura:attribute name="contactId" type="Id" />
+    <aura:attribute name="userId" type="Id" />
+    <aura:attribute name="fileFieldValue" type="String" />
+    <aura:attribute name="tempLabelAttr" type="String" />
+    <aura:attribute name="uploadedFiles" type="List" />
+    <aura:attribute name="filetype" type="List" default="['.png', '.jpg', '.jpeg', '.pdf']" />
+
+    <lightning:fileUpload label="{!v.tempLabelAttr}"
+                          name="fileUploader"
+                          multiple="true"
+                          accept="{!v.filetype}"
+                          fileFieldName="Guest_Record_fileupload__c"
+                          fileFieldValue="{!v.fileFieldValue}"
+                          onuploadfinished="{!c.handleUploadFinished}" />
+    
+    <aura:iteration items="{!v.uploadedFiles}" var="file">
+        <lightning:pill label="{!file.name}" onremove="{!c.PillClick}">
+            <aura:set attribute="media">
+                <lightning:icon iconName="standard:file"  alternativeText="File"/>
+            </aura:set>
+        </lightning:pill>
+    </aura:iteration>
+    
+</aura:component>

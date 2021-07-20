@@ -1,0 +1,29 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="UploadDocumentController">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="Options" type="List" />
+    <aura:attribute name="contactRecord" type="Object" />
+
+    <force:recordData aura:id="recordLoader"
+                      recordId="{!v.recordId}"
+                      fields="Preferred_Language__c, Preferred_Contact_Method__c, Email"
+                      targetFields="{!v.contactRecord}"
+                      />
+        
+    <aura:iteration items="{!v.Options}" var="Option">
+        <lightning:input type="toggle" label="{!Option.Label}" name="{!Option.DeveloperName}"
+                         checked="{!Option.Selected__c}"
+                         messageToggleActive="" messageToggleInactive=""/>
+        <br/>
+    </aura:iteration>
+    
+    <br/>
+    
+    <lightning:buttonGroup>
+        <lightning:button label="Email" iconName="utility:email" onclick="{!c.sendEmail}"/>
+        <lightning:button label="SMS" iconName="utility:sms" onclick="{!c.sendSMS}"/>
+    </lightning:buttonGroup>
+    <br/>Preferred Method: <b>{!v.contactRecord.Preferred_Contact_Method__c == null ? 'None' : v.contactRecord.Preferred_Contact_Method__c}</b>
+    
+</aura:component>

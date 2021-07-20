@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>DRIVER_LICENSE</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DRIVER_LICENSE</shortDescription>
+        <value>Driver&apos;s License</value>
+    </labels>
+    <labels>
+        <fullName>PAYSTUB</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PAYSTUB</shortDescription>
+        <value>Paystub</value>
+    </labels>
+    <labels>
+        <fullName>UPLOAD_DOCUMENTS</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>UPLOAD DOCUMENTS</shortDescription>
+        <value>Please upload the following documents:</value>
+    </labels>
+</CustomLabels>
