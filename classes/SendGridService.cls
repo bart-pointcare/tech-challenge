@@ -13,7 +13,7 @@ public class SendGridService {
         req.setEndpoint('https://api.sendgrid.com/v3/mail/send');
         req.setTimeout(120000);
         req.setHeader('content-type', 'application/json');
-        req.setHeader('Authorization', 'Bearer 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');
+        req.setHeader('Authorization', 'Bearer XXXXXXXX');
         req.setBody(jsonBody);
         Http http = new Http();
         HTTPResponse res = http.send(req);
